@@ -1,0 +1,143 @@
+<!-- journey.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Freshbux — Follow Our Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg width="40" height="40" viewBox="0 0 24 24"><rect rx="6" width="24" height="24" fill="#7851A9"></rect></svg>
+        <span class="brand-title">FRESHBUX</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="journey.html" class="active">Follow Our Journey</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container journey-hero">
+      <h1>Our Roadmap</h1>
+      <p class="lede">A clear, practical roadmap from prototype to national &amp; continental scale.</p>
+
+      <div class="journey-grid">
+        <!-- Each milestone is a button-like card; only the first is active (clickable) -->
+        <div class="milestone">
+          <a href="milestone1.html" class="milestone-card active">
+            <div class="milestone-head">
+              <h3>Portable Refrigeration</h3>
+              <div class="progress-meta"><span class="progress-count">1/5</span></div>
+            </div>
+            <p class="muted">Prototype building → market trader sales → farmer sales → IoT logging → thermal battery</p>
+            <div class="progress">
+              <div class="progress-bar" style="width:20%"></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Locked / disabled milestones -->
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Scaled Refrigeration</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">IoT-enabled units for major crops and farms</p>
+            <div class="progress">
+              <div class="progress-bar" style="width:0%"></div>
+            </div>
+          </button>
+        </div>
+
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Community Thermal Storage</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">Market centers and community farms</p>
+            <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+          </button>
+        </div>
+
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Refrigerated Trucks</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">Small and large-scale refrigerated transport</p>
+            <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+          </button>
+        </div>
+
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Gov't Partnerships</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">Work with regulators on standards & policy</p>
+            <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+          </button>
+        </div>
+
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Export Cold Storage</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">Nation's first dedicated export handling facilities</p>
+            <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+          </button>
+        </div>
+
+        <div class="milestone">
+          <button class="milestone-card locked" disabled>
+            <div class="milestone-head">
+              <h3>Africa Expansion</h3>
+              <div class="progress-meta"><span class="progress-count">0/5</span></div>
+            </div>
+            <p class="muted">Scale Freshbux across key African markets</p>
+            <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Freshbux</strong>
+        <p>Reducing post-harvest loss with affordable cooling.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="journey.html">Follow Our Journey</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: hello@freshbux.ng</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year2"></span> Freshbux. All rights reserved.</div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* styles.css
+   Shared stylesheet for Freshbux site.
+   - Primary purple: #7851A9
+   - Use only CSS (no JS required)
+   - Keep structure clear and commented for easy edits
+*/
+
+:root{
+  --purple: #7851A9;
+  --purple-600: #624089;
+  --muted: #6b6b6b;
+  --bg: #f7f7fa;
+  --card-bg: rgba(255,255,255,0.85);
+  --trans-grey: rgba(30,30,30,0.04);
+  --max-width: 1100px;
+  --radius: 12px;
+  --gutter: 20px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+/* Layout helpers */
+.container{max-width:var(--max-width);margin:0 auto;padding:40px 20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand-title{font-weight:700;letter-spacing:0.6px}
+
+/* Header */
+.site-header{background:transparent;padding:18px 0;position:sticky;top:0;z-index:50}
+.nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+.nav a.cta-link{background:transparent;border:2px solid var(--purple);padding:8px 12px;border-radius:8px;color:var(--purple)}
+.nav a.active{color:var(--purple)}
+
+/* Hero */
+.hero{padding:60px 0;background:linear-gradient(180deg, rgba(120,81,169,0.04), transparent)}
+.hero-grid{display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center}
+.hero h1{font-size:2rem;margin:0 0 12px;color:#111}
+.lede{color:var(--muted);margin:10px 0 18px;font-weight:500}
+.hero-media img{width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(16,16,16,0.06)}
+.hero-cta{display:flex;gap:12px;margin:18px 0}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--purple);color:#fff;border:0;box-shadow:0 6px 18px rgba(120,81,169,0.12)}
+.btn-outline{border:2px solid var(--purple);color:var(--purple);background:transparent}
+
+/* Features cards */
+.overview{padding-top:40px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 4px 20px rgba(12,12,12,0.04)}
+.card h3{margin:0 0 8px}
+
+/* CTA Strip */
+.cta-strip{background:linear-gradient(90deg, rgba(120,81,169,0.07), rgba(120,81,169,0.02));margin-top:34px;padding:22px 20px;border-radius:12px}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+/* Journey page */
+.journey-hero{padding-top:40px;padding-bottom:80px}
+.journey-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.milestone-card{display:block;padding:18px;border-radius:12px;border:1px solid rgba(120,81,169,0.12);background:rgba(255,255,255,0.75);text-align:left;transition:transform .22s,box-shadow .22s}
+.milestone-card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(120,81,169,0.08)}
+.milestone-card.locked{opacity:0.62;cursor:not-allowed;border-style:dashed}
+.milestone-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.milestone-head h3{margin:0;font-size:1.05rem}
+.progress{height:8px;background:var(--trans-grey);border-radius:8px;margin-top:12px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--purple),var(--purple-600));width:0%}
+
+/* Big progress on milestone detail */
+.progress.big{height:12px}
+.progress.big .progress-bar{height:100%}
+
+/* Muted text */
+.muted{color:var(--muted);font-size:0.95rem}
+
+/* Milestone detail page */
+.milestone-detail img{width:100%;border-radius:12px;box-shadow:0 8px 26px rgba(16,16,16,0.06)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px}
+.substeps{margin-top:14px}
+.substeps li{background:var(--card-bg);padding:14px;border-radius:10px;margin-bottom:12px;box-shadow:0 6px 18px rgba(12,12,12,0.04)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
+.contact-form label{display:block;margin-bottom:12px}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border:1px solid #e6e6e9;border-radius:8px;font-size:1rem}
+.contact-info{background:var(--card-bg);padding:16px;border-radius:12px}
+
+/* Footer */
+.site-footer{background:#fff;padding:28px 20px 40px;border-top:1px solid #f0edf6;margin-top:48px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.footer-nav a{display:block;text-decoration:none;color:var(--muted);margin-bottom:6px}
+.copyright{text-align:center;margin-top:18px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr; padding-bottom:10px}
+  .two-col{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .nav{display:none}
+  .header-inner{justify-content:space-between}
+  .container{padding:20px}
+  .hero h1{font-size:1.5rem}
+}
